@@ -26,3 +26,10 @@ Conditions to work:
   PRs
 - 'Allow auto-merge' must be enabled for the repository (under `Settings >
 (scroll to) Pull Requests`).
+
+## TODOs
+
+- [ ] validate signature (see https://gist.github.com/n9iels/311734835e2ea4719cdbf6ca0d0ab78c)
+- [ ] deploy as lambda with function URL (might require some further changes)
+- [ ] raise a comment if the PR is opened at wrong time of day
+- [ ] raise a comment on failure, suggesting possible reasons

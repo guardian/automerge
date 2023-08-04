@@ -4,14 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "tsc",
     "server": "esno src/index.ts",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prebuild": "rm -rf dist",
+    "build": "esbuild src/index.ts --bundle --minify=false --platform=node --target=es2022 --format=esm --outfile=dist/index.mjs --banner:js=\"import { createRequire } from 'module';const require = createRequire(import.meta.url);\"",
+    "postbuild": "cd dist && zip -r lambda.zip index.mjs"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@aws-sdk/client-s3": "^3.385.0",
     "@octokit/auth": "^3.0.3",
     "@octokit/graphql": "^7.0.1",
     "dotenv": "^16.3.1",
@@ -19,6 +22,8 @@
   },
   "devDependencies": {
     "@octokit/webhooks-types": "^7.1.0",
+    "@types/aws-lambda": "^8.10.119",
+    "esbuild": "^0.18.17",
     "esno": "^0.17.0",
     "smee-client": "^1.2.3",
     "typescript": "^5.1.6"
