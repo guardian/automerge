@@ -56,7 +56,7 @@ app.webhooks.on("pull_request.opened", async ({ payload, octokit }) => {
 
   if (payload.pull_request.user.type !== "Bot") {
     console.log(
-      `Skipping ${payload.pull_request.html_url} (not opened by a bot) (NOT ACTUALLY SKIPPING FOR TEST).`
+      `Skipping ${payload.pull_request.html_url} (not opened by a bot).`
     );
     return;
   }
