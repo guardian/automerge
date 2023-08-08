@@ -1,7 +1,11 @@
 # @guardian/automerge
 
-A simple Github App that will set automerge to true on PRs raised by bots during
-office hours (9-5).
+A simple Github App that will approve and set automerge to true on PRs raised 
+by bots during office hours (9-5).
+
+This means that PRs will **merge automatically* for bots with a standard branch
+protection setup (1 approval required). Only add to projects that are less
+risky or where you have good CI and tests.
 
 ## Enable for your repo
 
