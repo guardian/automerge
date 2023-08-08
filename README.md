@@ -1,9 +1,9 @@
 # @guardian/automerge
 
-A simple Github App that will approve and set automerge to true on PRs raised 
+A simple Github App that will approve and set automerge to true on PRs raised
 by bots during office hours (9-5).
 
-This means that PRs will **merge automatically* for bots with a standard branch
+This means that PRs will \*_merge automatically_ for bots with a standard branch
 protection setup (1 approval required). Only add to projects that are less
 risky or where you have good CI and tests.
 
@@ -36,3 +36,11 @@ updates:
       time: "09:30"
       timezone: "Europe/London"
 ```
+
+## Deploy
+
+Ensure you have Janus credentials for the Deploy Tools account and then run:
+
+    $ DIST_BUCKET=my-dist-bucket ./deploy.sh
+
+(Set the bucket to our dist bucket.)
