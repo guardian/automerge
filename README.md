@@ -1,3 +1,8 @@
+> [!NOTE]
+> This repository has now been archived.
+> It was originally intended to help in triaging Dependabot PRs.
+> Please use [GitHub's documentation](https://docs.github.com/en/code-security/dependabot/working-with-dependabot/automating-dependabot-with-github-actions) instead.
+
 # @guardian/automerge
 
 A simple Github App that will approve and set automerge to true on PRs raised
